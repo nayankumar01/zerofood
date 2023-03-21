@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Donate Food</title>
+	<meta charset="UTF-8">
+    <script>document.querySelector('form').addEventListener('submit', (event) => {
+        event.preventDefault();
+        const name = document.querySelector('#name').value;
+        const food = document.querySelector('#food').value;
+        const quantity = document.querySelector('#quantity').value;
+        const expiry = document.querySelector('#expiry').value;
+        const data = { name, food, quantity, expiry };
+        fetch('/donate-food', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application '
+            }
+        })
+        })
+    </script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <link rel="stylesheet" href="style.css"> -->
+	<script src="script.js"></script>
+    <style>
+        body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+	background-color: #f2f2f2;
+}
+
+header {
+	background-color: #2126b0;
+	color: #ffffff;
+	padding: 20px;
+}
+
+header h1 {
+	margin: 0;
+}
+
+main {
+	margin: 20px;
+}
+
+section {
+	margin-bottom: 40px;
+}
+
+h2 {
+	margin-top: 0;
+}
+
+form label {
+	display: block;
+	margin-bottom: 10px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="date"] {
+	display: block;
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 20px;
+	border: 1px solid #222020;
+	border-radius: 4px;
+}
+
+form button[type="submit"] {
+	background-color: #333;
+	color: #0c746d;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+	background-color: #260a8c;
+}
+
+    </style>
+</head>
+<body>
+	<header>
+		<h1>Donate Food</h1>
+	</header>
+	<main>
+		<section>
+			<h2>Food Donation Form</h2>
+			<form action="/donate-food" method="post">
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="name" required>
+				<label for="food">Food Item:</label>
+				<input type="text" id="food" name="food" required>
+				<label for="quantity">Quantity:</label>
+				<input type="number" id="quantity" name="quantity" required>
+				<label for="expiry">Expiry Date:</label>
+				<input type="date" id="expiry" name="expiry" required>
+				<button type="submit">Donate</button>
+			</form>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; 2023 Donate Food. All rights reserved.</p>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,48 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header, main, footer {
+    padding: 1rem;
+  }
+  
+  header {
+    background-color: #00bfff;
+    color: white;
+  }
+  
+  h1, h2 {
+    margin: 0;
+  }
+  
+  form label {
+    display: block;
+    margin-top: 1rem;
+  }
+  
+  form input {
+    display: block;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+  }
+  
+  form button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #00bfff;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+  }
+  
+  footer {
+    text-align: center;
+    background-color: #f0f0f0;
+    border-top: 1px solid #ccc;
+  }
+  

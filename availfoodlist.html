@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Available Food List</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="script.js"></script>
+  <style>
+   body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  nav {
+    float: right;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  
+  nav li:first-child {
+    margin-left: 0;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  main {
+    margin: 20px;
+  }
+  
+  section {
+    margin-bottom: 40px;
+  }
+  
+  h2 {
+    margin-top: 0;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    margin-bottom: 10px;
+  }
+  
+   footer {
+  background-color: #f5f5f5;
+  padding: 40px 20px;
+  color: #444;
+}
+
+
+.footer-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-col {
+  flex-basis: 33%;
+  padding: 0 20px;
+}
+
+.footer-col h3 {
+  font-size: 1.2em;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.footer-col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-col li {
+  margin-bottom: 10px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+}
+  </style>
+</head>
+<body>
+	<header>
+		<h1>Available Food List</h1>
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About Us</a></li>
+				<li><a href="#">Contact Us</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section>
+			<h2>Food Items Available</h2>
+			<ul id="foodList">
+				<!-- Available food items will be displayed here -->
+			</ul>
+		</section>
+		<section>
+			<h2>Submit Your Food Item</h2>
+			<form action="/submit-food" method="post">
+				<label for="foodName">Food Name:</label>
+				<input type="text" id="foodName" name="foodName" required>
+				<label for="foodDescription">Description:</label>
+				<textarea id="foodDescription" name="foodDescription" required></textarea>
+				<button type="submit">Submit</button>
+			</form>
+		</section>
+	</main>
+  <br>
+  <br>
+  <br>
+  <hr>
+  
+	<footer>
+    <div class="footer-wrapper">
+      <div class="footer-col">
+        <h3>About Us</h3>
+        <p>We are a non-profit organization dedicated to reducing food waste and fighting hunger.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Contact Us</h3>
+        <ul> 
+          <li>Email : knayan7766@gmail.com</li>
+          <li>Phone: 7766974273</li>
+          <li>twitter : @knayan77</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Get Involved</h3>
+        <ul>
+          <li>Donate food</li>
+          <li>Volunteer at a food bank</li>
+          <li>Spread the word about reducing food waste</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2023 Reduce Food Waste. All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
